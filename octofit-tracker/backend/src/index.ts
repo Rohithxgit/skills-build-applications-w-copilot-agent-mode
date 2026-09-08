@@ -1,7 +1,9 @@
 import express from 'express'
 
 import './config/database.js'
-import { Activity } from './models/activity.js'
+const apiBaseUrl = codespaceName
+  ? `https://${codespaceName}-8000.app.github.dev`
+  : `http://localhost:${port}`import { Activity } from './models/activity.js'
 import { User } from './models/user.js'
 
 const app = express()
